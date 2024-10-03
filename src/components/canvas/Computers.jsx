@@ -7,10 +7,10 @@ const Computers = ({ isMobile }) => {
   // Load the GLTF model
   const { scene } = useGLTF('./desktop_pc/scene.gltf');
 
-  useEffect(() => {
-    // Cleanup resources when the component is unmounted to prevent memory leaks
-    return () => scene.dispose();
-  }, [scene]);
+  // useEffect(() => {
+  //   // Cleanup resources when the component is unmounted to prevent memory leaks
+  //   return () => scene.dispose();
+  // }, [scene]);
 
   return (
     <mesh>
