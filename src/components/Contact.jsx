@@ -7,6 +7,8 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -26,16 +28,16 @@ const Contact = () => {
     setLoading(true);
 
     emailjs.send(
-      "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-      "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+      "service_9t3jox8", // Replace with your EmailJS service ID
+      "template_2evcdbm", // Replace with your EmailJS template ID
       {
         from_name: form.name,
-        to_name: "YOUR_NAME", // Replace with your name or company name
+        to_name: "Kyaw Min Htway", // Replace with your name or company name
         from_email: form.email,
-        to_email: "YOUR_EMAIL", // Replace with your email
+        to_email: "batman066813@gmail.com", // Replace with your email
         message: form.message,
       },
-      "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+      "Zb61rweXYhb4qaFd3" // Replace with your EmailJS public key
     )
       .then(() => {
         setLoading(false);
@@ -122,4 +124,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "");
+export default SectionWrapper(Contact, "contact");
